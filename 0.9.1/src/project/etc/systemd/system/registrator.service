@@ -1,0 +1,13 @@
+[Unit]
+Description=Registrator for ETCD
+Documentation=http://github.com/xpandmmi/registrator
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/registrator --config /etc/registrator.toml
+Restart=always
+TimeoutStartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

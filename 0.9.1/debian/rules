@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+
+.PHONY: clean build binary binary-arch
+
+CP=cp -f
+MKDIR=mkdir -p
+RM=rm -rf
+
+build:
+	$(MAKE)
+
+binary: binary-arch
+
+binary-arch:
+	# creating directories
+	$(MKDIR) debian/project/DEBIAN
+	$(MKDIR) debian/project/usr/local/bin
+	$(MKDIR) debian/project/usr/local/include
+	$(MKDIR) debian/project/usr/local/lib
+	# run debuild commands
+	dh_installinit
+	dh_strip
+	dh_lintian
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+clean:
+	$(RM) debian/project
+	$(MAKE) clean
