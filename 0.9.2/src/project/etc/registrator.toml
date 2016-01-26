@@ -1,0 +1,35 @@
+[service]
+  prefix = "/proxy"
+  route-host-path = "/"
+  route-by-path = true
+  route-host-name = ""
+  route-by-hostname = false
+  passthrough-host-header = true
+  service-port = 7101
+  service-has-healhcheck = true
+  healthcheck-path = "/healthcheck"
+
+[registration]
+  etcd-endpoints = ["http://127.0.0.1:4001"]
+  ttl = "3s"
+  registration-name = "registrator"
+  registration-prefix = "/traefik"
+  loadbalancing-strategy = "drr"
+  route-by-path = true
+  route-paths = ["/"]
+  route-by-method = false
+  route-by-host = false
+  pass-hot-header = true
+  enable-circuitbreaker = true
+  circuitbreaker-expression = "NetworkErrorRatio() > 0.5"
+  discovery-token = "38314c7af778a817844dccb26b7a9c4d"
+  discovery-enabled = true
+  discovery-registry = "https://discovery.etcd.io"
+
+[self-heal]
+  healthcheck-endpoint = "/healthcheck"
+  refresh-interval = "10s"
+  enabled = true
+  degrade-on-unavailable = true
+  timeout = "5s"
+  repeat-timeout = 2

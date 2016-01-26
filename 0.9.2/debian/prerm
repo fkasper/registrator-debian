@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+echo "Disabling Registrator Service"
+
+systemctl stop registrator
+systemctl disable registrator
+rm -f /etc/systemd/system/registrator.service
