@@ -3,7 +3,7 @@
 set -e
 
 curl -sSL -o /usr/bin/registrator https://dl.bintray.com/fkasper/XPAND/registrator
-curl -sSL -o /usr/bin/registrator.toml https://dl.bintray.com/fkasper/XPAND/registrator.toml
+curl -sSL -o /etc/registrator.toml https://dl.bintray.com/fkasper/XPAND/registrator.toml
 curl -sSL -o /etc/systemd/system/registrator.service https://dl.bintray.com/fkasper/XPAND/registrator.service
 
 chmod +x /usr/bin/registrator
