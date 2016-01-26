@@ -1,4 +1,4 @@
-etcd-discovery (1.0.alpha.404) trusty; urgency=high
+etcd-discovery (0.9.0) trusty; urgency=high
 
   * Initial Release.
 
