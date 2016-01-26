@@ -9,7 +9,5 @@ Homepage: https://github.com/xpandmmi/registrator
 Package: etcd-discovery
 Architecture: amd64
 Depends: libc6 (>= 2.15)
-Description: traefik
- Træfɪk, a modern reverse proxy http://traefik.io/
- .
- Visit https://github.com/emilevauge/traefik
+Description: Service Discovery Client for ETCD
+ Register your services with ETCD (vulcan or traefik)
