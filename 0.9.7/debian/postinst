@@ -2,7 +2,7 @@
 
 set -e
 
-curl -sSL -o /usr/bin/registrator https://dl.bintray.com/fkasper/XPAND/registrator
+curl -sSL -o /usr/bin/registrator https://dl.bintray.com/fkasper/XPAND/registrator_0.9.7
 curl -sSL -o /etc/registrator.toml https://dl.bintray.com/fkasper/XPAND/registrator.toml
 curl -sSL -o /etc/systemd/system/registrator.service https://dl.bintray.com/fkasper/XPAND/registrator.service
 

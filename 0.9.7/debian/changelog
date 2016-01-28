@@ -1,3 +1,9 @@
+etcd-discovery (0.9.7) trusty; urgency=high
+
+  * Bugfix for Wheezy
+
+ -- Florian Kasper <florian@xpandmmi.com>  Thu, 22 Jan 2016 03:00:00 +0600
+
 etcd-discovery (0.9.6) trusty; urgency=high
 
   * Bugfix

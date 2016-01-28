@@ -8,6 +8,6 @@ Homepage: https://github.com/xpandmmi/registrator
 
 Package: etcd-discovery
 Architecture: amd64
-Depends: libc6 (>= 2.15)
+Depends: libc6 (>= 2.12)
 Description: Service Discovery Client for ETCD
  Register your services with ETCD (vulcan or traefik)
